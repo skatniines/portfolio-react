@@ -1,0 +1,42 @@
+.ag {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.at p {
+  margin-bottom: 1.25rem;
+  color: var(--t2);
+  font-size: .97rem;
+  line-height: 1.9;
+}
+
+.at p strong {
+  color: var(--a2);
+}
+
+.ilist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1.8rem;
+}
+
+.ipill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border: 1px solid var(--bd);
+  border-radius: 999px;
+  background: var(--pill);
+  color: var(--pt);
+  font-size: 12px;
+  font-weight: 500;
+  transition: .3s ease;
+}
+
+.ipill:hover {
+  border-color: var(--a1);
+  background: var(--glow);
+  transform: translateY(-2px);
+}

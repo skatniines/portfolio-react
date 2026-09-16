@@ -1,0 +1,100 @@
+#contact {
+  padding: 7rem 0;
+}
+
+.cta-wrap {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 2rem;
+  border: 1px solid var(--bd);
+  border-radius: 34px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.01)),
+    linear-gradient(180deg, var(--surf), var(--surf2));
+  text-align: center;
+  box-shadow: 0 22px 60px var(--glow2);
+  isolation: isolate;
+  backdrop-filter: blur(14px);
+}
+
+[data-theme="light"] .cta-wrap {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.9), rgba(255,255,255,.72)),
+    linear-gradient(180deg, var(--surf), var(--surf2));
+}
+
+.cta-grid-deco {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, var(--bd) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bd) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: .45;
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta-big {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 1;
+  font-weight: 700;
+  color: var(--t1);
+}
+
+.cta-big em {
+  color: var(--a1);
+  font-style: italic;
+}
+
+.cta-sub {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto 2.8rem;
+  color: var(--t2);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.cta-links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.c-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 220px;
+  padding: 15px 24px;
+  border: 1px solid var(--bd2);
+  border-radius: 18px;
+  background: rgba(255,255,255,.03);
+  color: var(--t1);
+  font-size: 14px;
+  font-weight: 600;
+  transition: .3s ease;
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .c-link {
+  background: rgba(255,255,255,.55);
+}
+
+.c-link:hover {
+  transform: translateY(-4px);
+  border-color: var(--a1);
+  box-shadow: 0 12px 30px var(--glow2);
+  color: var(--a1);
+}

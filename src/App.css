@@ -1,0 +1,234 @@
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2.4rem 7rem;
+}
+
+section {
+  position: relative;
+}
+
+#about,
+#skills,
+#experience,
+#formations,
+#langues,
+#contact {
+  padding: 3rem 0;
+}
+
+.sec-h {
+  margin-bottom: 3.4rem;
+}
+
+.stag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: .8rem;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--a1);
+}
+
+.stag::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--a1);
+  opacity: .6;
+}
+
+.stit {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1;
+  font-weight: 700;
+  color: var(--t1);
+}
+
+.stit em {
+  color: var(--a1);
+  font-style: italic;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .22; }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes lb {
+  0%, 100% {
+    width: 50px;
+    opacity: .3;
+  }
+  50% {
+    width: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes morphBorder {
+  0%, 100% { border-radius: 40% 60% 55% 45% / 45% 50% 50% 55%; }
+  33% { border-radius: 55% 45% 40% 60% / 60% 45% 55% 40%; }
+  66% { border-radius: 45% 55% 60% 40% / 50% 60% 40% 50%; }
+}
+
+.rev {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s, transform .7s;
+}
+
+.rev.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  #hero {
+    grid-template-columns: 1fr 380px;
+  }
+}
+
+@media (max-width: 960px) {
+  #header {
+    padding: 0 1.5rem;
+  }
+
+  .hdr-nav {
+    display: none;
+  }
+
+  #menuBtn {
+    display: flex;
+  }
+
+  #hero {
+    grid-template-columns: 1fr;
+    padding: 7rem 0 3rem;
+  }
+
+  .hero-vis {
+    display: none;
+  }
+
+  .ag {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .human-langs,
+  .irow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 1.15rem 6rem;
+  }
+
+  #about,
+  #skills,
+  #experience,
+  #formations,
+  #langues,
+  #contact {
+    padding: 5rem 0;
+  }
+
+  .hname {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+  }
+
+  .sbx {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .slg-cards,
+  .exp-grid,
+  .fgrid,
+  .other-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .human-langs,
+  .irow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta-wrap {
+    padding: 3rem 1.2rem;
+    border-radius: 24px;
+  }
+
+  .cta-sub {
+    font-size: .95rem;
+  }
+
+  .cta-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .c-link {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .exp-photo {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sbx,
+  .human-langs,
+  .irow {
+    grid-template-columns: 1fr;
+  }
+
+  .hbtns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-fill,
+  .btn-ghost {
+    width: 100%;
+  }
+
+  .hdr-logo img {
+    height: 38px;
+  }
+
+  #themeBtn span:last-child {
+    display: none;
+  }
+}

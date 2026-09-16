@@ -1,0 +1,117 @@
+.tl-wrap {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.tl-line {
+  position: absolute;
+  left: 120px;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--a1), var(--bd));
+  opacity: .5;
+}
+
+.tl-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.tl-year-col {
+  width: 120px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 14px;
+}
+
+.tl-year {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--t3);
+  white-space: nowrap;
+}
+
+.tl-dot {
+  position: absolute;
+  left: 113px;
+  top: 16px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  z-index: 2;
+}
+
+.tl-dot.encours { background: var(--a1); box-shadow: 0 0 0 4px var(--glow); }
+.tl-dot.alt     { background: #facc15;  box-shadow: 0 0 0 4px rgba(250,204,21,.18); }
+.tl-dot.diplome { background: #4ade80;  box-shadow: 0 0 0 4px rgba(74,222,128,.18); }
+
+.tl-branch {
+  width: 30px;
+  height: 2px;
+  background: var(--bd2);
+  margin-top: 22px;
+  flex-shrink: 0;
+}
+
+.tl-card {
+  flex: 1;
+  padding: 1.3rem 1.5rem;
+  border: 1px solid var(--bd);
+  border-radius: 20px;
+  background: linear-gradient(180deg, var(--surf), var(--surf2));
+  transition: .3s ease;
+}
+
+.tl-card:hover {
+  border-color: var(--bd2);
+  transform: translateX(6px);
+  box-shadow: 0 12px 40px var(--glow2);
+}
+
+.tl-badge {
+  display: inline-block;
+  margin-bottom: .7rem;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.badge-encours { background: var(--debutant-bg);       color: var(--a1);              border: 1px solid var(--debutant-bd); }
+.badge-alt     { background: var(--intermediaire-bg);  color: var(--intermediaire-c); border: 1px solid var(--intermediaire-bd); }
+.badge-diplome { background: var(--avance-bg);         color: var(--avance-c);        border: 1px solid var(--avance-bd); }
+
+.tl-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--t1);
+  margin-bottom: 3px;
+}
+
+.tl-card-school {
+  color: var(--a1);
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: .8rem;
+}
+
+.tl-card-desc {
+  color: var(--t2);
+  font-size: .9rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+  .tl-line      { left: 80px; }
+  .tl-year-col  { width: 80px; padding-right: 22px; }
+  .tl-dot       { left: 73px; }
+  .tl-branch    { width: 22px; }
+}

@@ -1,0 +1,223 @@
+.skills-intro {
+  max-width: 760px;
+  margin-bottom: 3rem;
+  color: var(--t2);
+  font-size: .98rem;
+  line-height: 1.8;
+}
+
+.skills-level-group {
+  margin-bottom: 2.5rem;
+}
+
+.slg-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--t2);
+}
+
+.slg-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.slg-dot.avance {
+  background: var(--avance-c);
+  box-shadow: 0 0 8px var(--avance-c);
+}
+
+.slg-dot.intermediaire {
+  background: var(--intermediaire-c);
+  box-shadow: 0 0 8px var(--intermediaire-c);
+}
+
+.slg-dot.debutant {
+  background: var(--debutant-c);
+  box-shadow: 0 0 8px var(--debutant-c);
+}
+
+.slg-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+.lang-card.modern {
+  position: relative;
+  overflow: hidden;
+  min-height: 185px;
+  padding: 1.4rem;
+  border: 1px solid var(--bd);
+  border-radius: 22px;
+  background: linear-gradient(180deg, var(--surf), var(--surf2));
+  text-align: left;
+  transition: .35s ease;
+  backdrop-filter: blur(10px);
+}
+
+.lang-card.modern::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  border-radius: 22px 22px 0 0;
+  opacity: .95;
+}
+
+.lang-card.modern:has(.lang-level.avance)::before {
+  background: linear-gradient(90deg, var(--avance-c), transparent);
+}
+
+.lang-card.modern:has(.lang-level.intermediaire)::before {
+  background: linear-gradient(90deg, var(--intermediaire-c), transparent);
+}
+
+.lang-card.modern:has(.lang-level.debutant)::before {
+  background: linear-gradient(90deg, var(--debutant-c), transparent);
+}
+
+.lang-card.modern:hover {
+  transform: translateY(-8px);
+  border-color: var(--bd2);
+  box-shadow: 0 18px 50px var(--glow2);
+}
+
+.lang-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1rem;
+}
+
+.lang-card.modern .lang-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bd2);
+  border-radius: 14px;
+  background: var(--pill);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.lang-card.modern .lang-name {
+  margin-bottom: 4px;
+  color: var(--t1);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.lang-card.modern .lang-level {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.lang-level.avance {
+  color: var(--avance-c);
+  background: var(--avance-bg);
+  border: 1px solid var(--avance-bd);
+}
+
+.lang-level.intermediaire {
+  color: var(--intermediaire-c);
+  background: var(--intermediaire-bg);
+  border: 1px solid var(--intermediaire-bd);
+}
+
+.lang-level.debutant {
+  color: var(--debutant-c);
+  background: var(--debutant-bg);
+  border: 1px solid var(--debutant-bd);
+}
+
+.lang-desc {
+  color: var(--t2);
+  font-size: .93rem;
+  line-height: 1.75;
+}
+
+.lang-desc strong {
+  color: var(--a2);
+}
+
+.bandes-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.sk-bande {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 1.1rem 1.6rem;
+  border: 1px solid var(--bd);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--surf), var(--surf2));
+  transition: .3s ease;
+}
+.sk-bande:hover {
+  border-color: var(--bd2);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px var(--glow2);
+}
+.sk-bande-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 130px;
+  border-right: 1px solid var(--bd);
+  padding-right: 20px;
+  flex-shrink: 0;
+}
+.sk-bande-ico {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  background: var(--pill);
+  font-size: 17px;
+}
+.sk-bande-cat {
+  color: var(--a1);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.sk-bande-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.sk-tag-b {
+  padding: 5px 12px;
+  border: 1px solid var(--bd);
+  border-radius: 999px;
+  background: var(--surf2);
+  color: var(--t2);
+  font-size: 12px;
+  transition: .2s ease;
+}
+.sk-tag-b:hover {
+  border-color: var(--a1);
+  color: var(--a1);
+}

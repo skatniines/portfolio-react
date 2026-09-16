@@ -1,0 +1,181 @@
+.human-langs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.hl-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.2rem 1.2rem 1.6rem;
+  border: 1px solid var(--bd);
+  border-radius: 24px;
+  background: linear-gradient(180deg, var(--surf), var(--surf2));
+  transition: .4s var(--ease);
+  cursor: default;
+}
+
+.hl-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, var(--glow), transparent);
+  opacity: 0;
+  transition: opacity .4s;
+  pointer-events: none;
+}
+
+.hl-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--a1), transparent);
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.hl-card:hover {
+  border-color: var(--bd2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px var(--glow2);
+}
+
+.hl-card:hover::before,
+.hl-card:hover::after {
+  opacity: 1;
+}
+
+.hl-flag {
+  width: 64px;
+  height: 44px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--bd2);
+  flex-shrink: 0;
+  transition: transform .4s var(--ease);
+}
+
+.hl-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hl-card:hover .hl-flag {
+  transform: scale(1.1) translateY(-3px);
+}
+
+.hl-name {
+  color: var(--t1);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.hl-lvl {
+  display: inline-block;
+  padding: 3px 12px;
+  border: 1px solid var(--bd2);
+  border-radius: 999px;
+  background: var(--pill);
+  color: var(--a1);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.hl-sub {
+  color: var(--t3);
+  font-size: 11px;
+  font-style: italic;
+}
+
+.sec-sub {
+  margin: 2.8rem 0 1.2rem;
+}
+
+.stag-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--a1);
+}
+
+.stag-sm::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: var(--a1);
+  opacity: .6;
+}
+
+/* Intérêts */
+.irow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.ichip {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 2rem 1rem;
+  border: 1px solid var(--bd);
+  border-radius: 20px;
+  background: linear-gradient(180deg, var(--surf), var(--surf2));
+  color: var(--t2);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  transition: .4s var(--ease);
+  cursor: default;
+}
+
+.ichip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 70% at 50% 120%, var(--glow), transparent);
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.ichip:hover {
+  border-color: var(--bd2);
+  color: var(--a1);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px var(--glow2);
+}
+
+.ichip:hover::before {
+  opacity: 1;
+}
+
+.ichip span {
+  font-size: 2rem;
+  transition: transform .4s var(--ease);
+}
+
+.ichip:hover span {
+  transform: scale(1.2) translateY(-3px);
+}
